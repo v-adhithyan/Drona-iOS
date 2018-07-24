@@ -7,7 +7,25 @@
 		<key>Drona.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>4</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>7868E7022104951C00E6A395</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7868E7192104951D00E6A395</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7868E7242104951D00E6A395</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

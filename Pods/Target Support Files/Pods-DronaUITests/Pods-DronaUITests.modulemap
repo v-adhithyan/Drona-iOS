@@ -1,0 +1,6 @@
+framework module Pods_DronaUITests {
+  umbrella header "Pods-DronaUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
