@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		78346C932147584B00284AFD /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 78346C922147584B00284AFD /* fonts */; };
 		7868E7072104951C00E6A395 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7868E7062104951C00E6A395 /* AppDelegate.swift */; };
 		7868E7092104951C00E6A395 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7868E7082104951C00E6A395 /* ViewController.swift */; };
 		7868E70C2104951C00E6A395 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7868E70A2104951C00E6A395 /* Main.storyboard */; };
@@ -42,6 +43,7 @@
 		22BD6E4FBA17167D4294C58F /* Pods-DronaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DronaUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DronaUITests/Pods-DronaUITests.release.xcconfig"; sourceTree = "<group>"; };
 		6EC94BEFC0102D7210340CD2 /* Pods-DronaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DronaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DronaTests/Pods-DronaTests.release.xcconfig"; sourceTree = "<group>"; };
 		70ACBD8C18B7187D8A205B49 /* Pods_DronaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DronaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		78346C922147584B00284AFD /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = fonts; path = ../../../android/drona/mobile/src/main/assets/fonts; sourceTree = "<group>"; };
 		7868E7032104951C00E6A395 /* Drona.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Drona.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7868E7062104951C00E6A395 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7868E7082104951C00E6A395 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 		7868E7052104951C00E6A395 /* Drona */ = {
 			isa = PBXGroup;
 			children = (
+				78346C922147584B00284AFD /* fonts */,
 				7868E7062104951C00E6A395 /* AppDelegate.swift */,
 				7868E7082104951C00E6A395 /* ViewController.swift */,
 				7868E70A2104951C00E6A395 /* Main.storyboard */,
@@ -279,6 +282,7 @@
 				7868E7142104951D00E6A395 /* LaunchScreen.storyboard in Resources */,
 				7868E7112104951D00E6A395 /* Assets.xcassets in Resources */,
 				7868E70C2104951C00E6A395 /* Main.storyboard in Resources */,
+				78346C932147584B00284AFD /* fonts in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -556,7 +560,9 @@
 			baseConfigurationReference = 95F9FE2A9B77DFC9B939D866 /* Pods-Drona.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UQ4ZGJ76Q2;
 				INFOPLIST_FILE = Drona/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -574,7 +580,9 @@
 			baseConfigurationReference = F9E1C754ED7364731856E6DB /* Pods-Drona.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UQ4ZGJ76Q2;
 				INFOPLIST_FILE = Drona/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
