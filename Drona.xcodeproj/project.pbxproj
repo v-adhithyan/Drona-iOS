@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		78346C932147584B00284AFD /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 78346C922147584B00284AFD /* fonts */; };
+		783437A62148F453004C3CD6 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783437A52148F453004C3CD6 /* Extensions.swift */; };
+		783A05022148E832009ECC2C /* proximanova.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 783A05002148E832009ECC2C /* proximanova.ttf */; };
+		783A05032148E832009ECC2C /* proximanova-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 783A05012148E832009ECC2C /* proximanova-bold.ttf */; };
 		7868E7072104951C00E6A395 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7868E7062104951C00E6A395 /* AppDelegate.swift */; };
 		7868E7092104951C00E6A395 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7868E7082104951C00E6A395 /* ViewController.swift */; };
 		7868E70C2104951C00E6A395 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7868E70A2104951C00E6A395 /* Main.storyboard */; };
@@ -16,6 +18,7 @@
 		7868E7142104951D00E6A395 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7868E7122104951D00E6A395 /* LaunchScreen.storyboard */; };
 		7868E71F2104951D00E6A395 /* DronaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7868E71E2104951D00E6A395 /* DronaTests.swift */; };
 		7868E72A2104951D00E6A395 /* DronaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7868E7292104951D00E6A395 /* DronaUITests.swift */; };
+		78AA7CF9214A0877006998AF /* MainMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AA7CF8214A0877006998AF /* MainMenuTableViewCell.swift */; };
 		89AF60E46D255A009922DCCB /* Pods_DronaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1711F97D0FD7C88AEE4CE37D /* Pods_DronaTests.framework */; };
 		ACBA68965327B9F7D8322D3D /* Pods_Drona.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D585064B1A5B42B77C99056B /* Pods_Drona.framework */; };
 		D5F5BF0F58E066341B3787D2 /* Pods_DronaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70ACBD8C18B7187D8A205B49 /* Pods_DronaUITests.framework */; };
@@ -43,7 +46,9 @@
 		22BD6E4FBA17167D4294C58F /* Pods-DronaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DronaUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DronaUITests/Pods-DronaUITests.release.xcconfig"; sourceTree = "<group>"; };
 		6EC94BEFC0102D7210340CD2 /* Pods-DronaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DronaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DronaTests/Pods-DronaTests.release.xcconfig"; sourceTree = "<group>"; };
 		70ACBD8C18B7187D8A205B49 /* Pods_DronaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DronaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		78346C922147584B00284AFD /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = fonts; path = ../../../android/drona/mobile/src/main/assets/fonts; sourceTree = "<group>"; };
+		783437A52148F453004C3CD6 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		783A05002148E832009ECC2C /* proximanova.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = proximanova.ttf; sourceTree = "<group>"; };
+		783A05012148E832009ECC2C /* proximanova-bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "proximanova-bold.ttf"; sourceTree = "<group>"; };
 		7868E7032104951C00E6A395 /* Drona.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Drona.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7868E7062104951C00E6A395 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7868E7082104951C00E6A395 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +63,7 @@
 		7868E7252104951D00E6A395 /* DronaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DronaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7868E7292104951D00E6A395 /* DronaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DronaUITests.swift; sourceTree = "<group>"; };
 		7868E72B2104951D00E6A395 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		78AA7CF8214A0877006998AF /* MainMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuTableViewCell.swift; sourceTree = "<group>"; };
 		95F9FE2A9B77DFC9B939D866 /* Pods-Drona.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Drona.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Drona/Pods-Drona.debug.xcconfig"; sourceTree = "<group>"; };
 		A12056A2D7C4502704720DE2 /* Pods-DronaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DronaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DronaTests/Pods-DronaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BFF2F5D4E2142EDCFD209F38 /* Pods-DronaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DronaUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DronaUITests/Pods-DronaUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -93,6 +99,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		783A04FF2148E7B4009ECC2C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				783A05012148E832009ECC2C /* proximanova-bold.ttf */,
+				783A05002148E832009ECC2C /* proximanova.ttf */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		7868E6FA2104951C00E6A395 = {
 			isa = PBXGroup;
 			children = (
@@ -118,10 +133,12 @@
 		7868E7052104951C00E6A395 /* Drona */ = {
 			isa = PBXGroup;
 			children = (
-				78346C922147584B00284AFD /* fonts */,
+				783A04FF2148E7B4009ECC2C /* Resources */,
 				7868E7062104951C00E6A395 /* AppDelegate.swift */,
 				7868E7082104951C00E6A395 /* ViewController.swift */,
+				783437A52148F453004C3CD6 /* Extensions.swift */,
 				7868E70A2104951C00E6A395 /* Main.storyboard */,
+				78AA7CF8214A0877006998AF /* MainMenuTableViewCell.swift */,
 				7868E7102104951D00E6A395 /* Assets.xcassets */,
 				7868E7122104951D00E6A395 /* LaunchScreen.storyboard */,
 				7868E7152104951D00E6A395 /* Info.plist */,
@@ -279,10 +296,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				783A05032148E832009ECC2C /* proximanova-bold.ttf in Resources */,
 				7868E7142104951D00E6A395 /* LaunchScreen.storyboard in Resources */,
 				7868E7112104951D00E6A395 /* Assets.xcassets in Resources */,
 				7868E70C2104951C00E6A395 /* Main.storyboard in Resources */,
-				78346C932147584B00284AFD /* fonts in Resources */,
+				783A05022148E832009ECC2C /* proximanova.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,11 +382,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Drona/Pods-Drona-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AutoLinearLayoutView/AutoLinearLayoutView.framework",
 				"${BUILT_PRODUCTS_DIR}/FeedKit/FeedKit.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AutoLinearLayoutView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FeedKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 			);
@@ -387,6 +407,8 @@
 				7868E7092104951C00E6A395 /* ViewController.swift in Sources */,
 				7868E70F2104951C00E6A395 /* Drona.xcdatamodeld in Sources */,
 				7868E7072104951C00E6A395 /* AppDelegate.swift in Sources */,
+				78AA7CF9214A0877006998AF /* MainMenuTableViewCell.swift in Sources */,
+				783437A62148F453004C3CD6 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

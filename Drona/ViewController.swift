@@ -10,11 +10,20 @@ import UIKit
 import FeedKit
 import MBProgressHUD
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+   
+    @IBOutlet weak var tableView: UITableView!
+    let categories = ["Marketing", "Finance", "Economics", "Others"]
+    let categoryImages = [UIImage(named: "marketing_menu"), UIImage(named: "finance_menu"), UIImage(named: "economics_menu"), UIImage(named: "others_menu")]
+    let categoryColors = [UIColor.hexcodeToUIColor(hex: "#885f7f"), UIColor.hexcodeToUIColor(hex: "#d0c490"), UIColor.hexcodeToUIColor(hex: "#13b0a5"), UIColor.hexcodeToUIColor(hex: "#FFA500")]
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        parseFeed()
+        tableView.delegate = self
+        tableView.dataSource = self
+        //UIApplication.shared.statusBarView?.backgroundColor = .red
+        addNavBar()
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,6 +52,26 @@ class ViewController: UIViewController {
         }
     }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return categories.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell=tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MainMenuTableViewCell
+        cell.backgroundView?.backgroundColor = categoryColors[indexPath.row]
+        cell.categoryImage.backgroundColor = categoryColors[indexPath.row]
+        cell.categoryImage.image = self.categoryImages[indexPath.row]
+        cell.categoryTitle.text = self.categories[indexPath.row]
+        return cell
+    }
+    
+    func addNavBar() {
+        let navBar: UINavigationBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: 320, height: 50))
+        navBar.barTintColor = UIColor.hexcodeToUIColor(hex: "#E53935")
+        let navItem = UINavigationItem(title: "Drona");
+        navBar.setItems([navItem], animated: false);
+        self.view.addSubview(navBar);
+    }
 
 }
 

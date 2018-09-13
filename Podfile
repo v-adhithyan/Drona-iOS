@@ -8,7 +8,8 @@ target 'Drona' do
   # Pods for Drona
    pod 'FeedKit', '~> 8.0'
    pod 'MBProgressHUD', '~> 1.1.0'
-
+   pod "AutoLinearLayoutView"
+   
   target 'DronaTests' do
     inherit! :search_paths
     # Pods for testing

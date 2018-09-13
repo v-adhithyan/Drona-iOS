@@ -43,8 +43,8 @@
 	</array>
 	<key>UIAppFonts</key>
 	<array>
-		<string>ProximaNova.ttf</string>
-		<string>ProximaNova-bold.ttf</string>
+		<string>proximanova.ttf</string>
+		<string>proximanova-bold.ttf</string>
 	</array>
 </dict>
 </plist>

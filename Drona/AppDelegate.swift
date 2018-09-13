@@ -18,8 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        NSLog("finish")
-        
+        setupCustomFont()
         return true
     }
 
@@ -98,6 +97,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
 
+    func setupCustomFont() {
+        /*let customFont = UIFont.proximaNovaRegular(size: 17)
+        UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font: customFont], for: .normal)
+        UITextField.appearance().substituteFontName = custt
+        UILabel.appearance().substituteFontName = Constants.App.regularFont
+        UILabel.appearance().substituteFontNameBold = Constants.App.boldFont*/
+    }
     
 }
 
