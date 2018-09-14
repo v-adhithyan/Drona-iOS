@@ -143,14 +143,18 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "${BUILT_PRODUCTS_DIR}/AutoLinearLayoutView/AutoLinearLayoutView.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/FeedKit/FeedKit.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Ji/Ji.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/ReadabilityKit/ReadabilityKit.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "${BUILT_PRODUCTS_DIR}/AutoLinearLayoutView/AutoLinearLayoutView.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/FeedKit/FeedKit.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Ji/Ji.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/ReadabilityKit/ReadabilityKit.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

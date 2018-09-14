@@ -13,9 +13,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FeedViewController" customModule="Drona" customModuleProvider="target">
             <connections>
                 <outlet property="contentTextView" destination="hGv-45-r2U" id="NrT-cT-Mpx"/>
-                <outlet property="dateTextView" destination="TpZ-Gn-fdV" id="RiV-B6-oeV"/>
+                <outlet property="dateTextView" destination="TpZ-Gn-fdV" id="vKf-c8-fD3"/>
                 <outlet property="imageView" destination="JJh-I6-rZz" id="yW9-s0-bw4"/>
-                <outlet property="titleTextView" destination="hGv-45-r2U" id="Y3U-lc-heg"/>
+                <outlet property="titleTextView" destination="dsD-jQ-DGa" id="4Kc-ej-waj"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -52,7 +52,7 @@
                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" text="Title" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dsD-jQ-DGa">
                             <rect key="frame" x="0.0" y="150" width="414" height="100"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="28"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="28"/>
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                         </textView>
                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" text="Date" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="TpZ-Gn-fdV">

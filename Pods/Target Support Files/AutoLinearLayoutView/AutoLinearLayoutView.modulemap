@@ -1,6 +1,0 @@
-framework module AutoLinearLayoutView {
-  umbrella header "AutoLinearLayoutView-umbrella.h"
-
-  export *
-  module * { export * }
-}
