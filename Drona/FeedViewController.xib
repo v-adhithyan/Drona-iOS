@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FeedViewController" customModule="Drona" customModuleProvider="target">
+            <connections>
+                <outlet property="contentTextView" destination="hGv-45-r2U" id="NrT-cT-Mpx"/>
+                <outlet property="dateTextView" destination="TpZ-Gn-fdV" id="RiV-B6-oeV"/>
+                <outlet property="imageView" destination="JJh-I6-rZz" id="yW9-s0-bw4"/>
+                <outlet property="titleTextView" destination="hGv-45-r2U" id="Y3U-lc-heg"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xg5-wc-dlc">
+                    <rect key="frame" x="0.0" y="692" width="414" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <items>
+                        <barButtonItem title="Open in browser" id="RbK-TX-K1B">
+                            <connections>
+                                <action selector="openCurrentStoryInBrowser:" destination="-1" id="W40-8Z-X8m"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="eNW-Pl-xKy"/>
+                        <barButtonItem title="Share link" id="de9-Sm-540"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="OM8-Tu-bv7"/>
+                        <barButtonItem title="Next" id="Kb8-bS-tKd">
+                            <connections>
+                                <action selector="nextStory:" destination="-1" id="Wov-VB-Fjm"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
+                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xDH-5K-eDy">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="500"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JJh-I6-rZz">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                        </imageView>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" text="Title" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dsD-jQ-DGa">
+                            <rect key="frame" x="0.0" y="150" width="414" height="100"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="28"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" text="Date" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="TpZ-Gn-fdV">
+                            <rect key="frame" x="0.0" y="250" width="414" height="50"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" text="Conten" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hGv-45-r2U">
+                            <rect key="frame" x="0.0" y="300" width="414" height="200"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="JJh-I6-rZz" firstAttribute="width" secondItem="xDH-5K-eDy" secondAttribute="width" id="D1P-ra-R7d"/>
+                        <constraint firstItem="dsD-jQ-DGa" firstAttribute="height" secondItem="xDH-5K-eDy" secondAttribute="height" multiplier="0.2" id="Lb2-Nl-Mbn"/>
+                        <constraint firstItem="JJh-I6-rZz" firstAttribute="height" secondItem="xDH-5K-eDy" secondAttribute="height" multiplier="0.3" id="UEf-r8-RJO"/>
+                        <constraint firstItem="JJh-I6-rZz" firstAttribute="centerX" secondItem="xDH-5K-eDy" secondAttribute="centerX" id="aif-ch-Vbs"/>
+                        <constraint firstItem="hGv-45-r2U" firstAttribute="height" secondItem="xDH-5K-eDy" secondAttribute="height" multiplier="0.4" id="eF1-2r-lMx"/>
+                        <constraint firstItem="TpZ-Gn-fdV" firstAttribute="height" secondItem="xDH-5K-eDy" secondAttribute="height" multiplier="0.1" id="nXM-CU-8l4"/>
+                        <constraint firstItem="JJh-I6-rZz" firstAttribute="centerY" secondItem="xDH-5K-eDy" secondAttribute="centerY" id="nl6-5K-XT5"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="xDH-5K-eDy" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.85" id="GSW-MC-89Z"/>
+                <constraint firstItem="xDH-5K-eDy" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Lvb-xN-mlj"/>
+                <constraint firstItem="xDH-5K-eDy" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="dof-bA-zoa"/>
+                <constraint firstItem="xDH-5K-eDy" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="q6A-mf-B05"/>
+            </constraints>
+            <point key="canvasLocation" x="32.5" y="53"/>
+        </view>
+    </objects>
+</document>

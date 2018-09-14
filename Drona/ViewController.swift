@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import FeedKit
-import MBProgressHUD
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
    
@@ -22,36 +20,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        //UIApplication.shared.statusBarView?.backgroundColor = .red
-        addNavBar()
+        self.navigationItem.title = "Drona"
+        //UIApplication.shared.statusBarView?.backgroundColor = UIColor.hexcodeToUIColor(hex: "#E53935")
+        //addNavBar()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
 
-    func parseFeed() {
-        let loadingNotification = MBProgressHUD.showAdded(to: view, animated: true)
-        loadingNotification.mode = MBProgressHUDMode.indeterminate
-        loadingNotification.label.text = "Loading"
-        let feedURL = URL(string: "https://jrvarma.wordpress.com/feed")!
-        let parser = FeedParser(URL: feedURL)
-        parser.parseAsync(queue: DispatchQueue.global(qos: .userInitiated)) { (result) in
-            DispatchQueue.main.async {
-                guard let feed = result.rssFeed, result.isSuccess else {
-                    print(result.error ?? "")
-                    return
-                }
-                let item = feed.items?.first
-                print(item?.title)
-                print(item?.link)
-                print(item?.description)
-                MBProgressHUD.hideAllHUDs(for: self.view, animated: true)
-            }
-            
-        }
-    }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return categories.count
     }
@@ -63,6 +40,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         cell.categoryImage.image = self.categoryImages[indexPath.row]
         cell.categoryTitle.text = self.categories[indexPath.row]
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let category = categories[indexPath.row].uppercased()
+        let feedController = FeedViewController(nibName: "FeedViewController", bundle: nil)
+        feedController.category = category
+        self.present(feedController, animated: true, completion: nil)
     }
     
     func addNavBar() {
