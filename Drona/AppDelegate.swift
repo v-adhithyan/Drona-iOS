@@ -22,7 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var navigationBarAppearace = UINavigationBar.appearance()
         navigationBarAppearace.tintColor = UIColor.hexcodeToUIColor(hex: "#E53935")
         navigationBarAppearace.barTintColor = UIColor.hexcodeToUIColor(hex: "#E53935")
-        //UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
+        UIApplication.shared.statusBarStyle = UIStatusBarStyle.lightContent
+        UIApplication.shared.statusBarView?.backgroundColor = UIColor.hexcodeToUIColor(hex: "#E53935")
         //navigationBarAppearace.titleText
         return true
     }
@@ -103,11 +104,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func setupCustomFont() {
-        /*let customFont = UIFont.proximaNovaRegular(size: 17)
-        UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font: customFont], for: .normal)
-        UITextField.appearance().substituteFontName = custt
-        UILabel.appearance().substituteFontName = Constants.App.regularFont
-        UILabel.appearance().substituteFontNameBold = Constants.App.boldFont*/
+        //let customFont = UIFont.proximaNovaRegular(size: 17)
+        //UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font: customFont], for: .normal)
     }
     
 }

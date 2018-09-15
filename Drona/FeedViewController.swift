@@ -19,6 +19,8 @@ class FeedViewController: UIViewController {
     
     var items = Array<RSSFeedItem>()
     var index = -1
+    var categoryLinksMap = [String: [String]]()
+    
     @IBOutlet weak var imageView: UIImageView!
     
     @IBOutlet weak var dateTextView: UITextView!
@@ -30,12 +32,13 @@ class FeedViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        UIApplication.shared.statusBarView?.backgroundColor = UIColor.hexcodeToUIColor(hex: "#E53935")
+        //UIApplication.shared.statusBarView?.backgroundColor = UIColor.hexcodeToUIColor(hex: "#E53935")
         
         titleTextView.font = UIFont.proximaNovaBold(size: 28)
         dateTextView.font = UIFont.proximaNovaRegular(size: 14)
         contentTextView.font = UIFont.proximaNovaRegular(size: 20)
-        parseFeed()
+        addItemsToCategoriesMap()
+        parseFeed(urls: (self.categoryLinksMap[category.lowercased()])!)
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,21 +46,25 @@ class FeedViewController: UIViewController {
     }
     
 
-    func parseFeed() {
+    func parseFeed(urls: [String]) {
         showProgressBar()
-        let feedURL = URL(string: "https://www.engadget.com/rss.xml")!
-        let parser = FeedParser(URL: feedURL)
-        parser.parseAsync(queue: DispatchQueue.global(qos: .userInitiated)) { (result) in
-            DispatchQueue.main.async {
-                guard let feed = result.rssFeed, result.isSuccess else {
-                    print(result.error ?? "")
-                    return
+        for url in urls {
+            let feedURL = URL(string: url)
+            let parser = FeedParser(URL: feedURL!)
+            parser.parseAsync(queue: DispatchQueue.global(qos: .userInitiated)) { (result) in
+                DispatchQueue.main.async {
+                    guard let feed = result.rssFeed, result.isSuccess else {
+                        print(result.error ?? "")
+                        return
+                    }
+                    self.items.append(contentsOf: feed.items!)
+                    if(self.index == -1) {
+                        self.index = 0
+                        self.parseArticle()
+                    }
                 }
-                self.items = feed.items!
-                self.index = 0
-                self.parseArticle()
+                
             }
-            
         }
     }
     
@@ -96,5 +103,12 @@ class FeedViewController: UIViewController {
     
     func hideProgressBar() {
         MBProgressHUD.hideAllHUDs(for: self.view, animated: true)
+    }
+    
+    func addItemsToCategoriesMap() {
+        categoryLinksMap["marketing"] = ["http://www.adweek.com/feed", "http://feeds2.feedburner.com/ducttapemarketing/nRUD", "http://rss.marketingprofs.com/marketingprofs"]
+        categoryLinksMap["finance"] = ["http://www.thehindubusinessline.com/markets/stock-markets/?service=rss", "https://faculty.iima.ac.in/~jrvarma/blog/index.cgi/index.rss", "http://rss.nytimes.com/services/xml/rss/nyt/Business.xml"]
+        categoryLinksMap["economics"] = ["http://feeds2.feedburner.com/EconomistsView", "http://feeds2.feedburner.com/Themoneyillusion"]
+        categoryLinksMap["others"] = ["https://www.engadget.com/rss.xml"]
     }
 }
