@@ -19,12 +19,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         setupCustomFont()
-        var navigationBarAppearace = UINavigationBar.appearance()
-        navigationBarAppearace.tintColor = UIColor.hexcodeToUIColor(hex: "#E53935")
-        navigationBarAppearace.barTintColor = UIColor.hexcodeToUIColor(hex: "#E53935")
+        UINavigationBar.appearance().tintColor = UIColor.hexcodeToUIColor(hex: "#ffffff")
+        UINavigationBar.appearance().barTintColor = UIColor.hexcodeToUIColor(hex: "#E53935")
+        //UINavigationBar.appearance().barStyle = UIBarStyle.init(rawValue: 0xffffff)!*/
         UIApplication.shared.statusBarStyle = UIStatusBarStyle.lightContent
         UIApplication.shared.statusBarView?.backgroundColor = UIColor.hexcodeToUIColor(hex: "#E53935")
-        //navigationBarAppearace.titleText
         return true
     }
 

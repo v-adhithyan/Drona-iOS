@@ -32,7 +32,15 @@ class FeedViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //UIApplication.shared.statusBarView?.backgroundColor = UIColor.hexcodeToUIColor(hex: "#E53935")
+        //UIApplication.shared.statusBarView?.backgroundColor = UIColor.hexcodeToUIColor(hex: "#E53935")'
+        
+        /*let backbutton = UIButton(type: .custom)
+        backbutton.setImage(UIImage(named: "back_button"), for: []) // Image can be downloaded from here below link
+        backbutton.setTitle("Back", for: [])
+        backbutton.setTitleColor(backbutton.tintColor, for: []) // You can change the TitleColor
+        backbutton.addTarget(self, action: Selector(("backAction")), for: .touchUpInside)
+        
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backbutton)*/
         
         titleTextView.font = UIFont.proximaNovaBold(size: 28)
         dateTextView.font = UIFont.proximaNovaRegular(size: 14)
@@ -89,8 +97,10 @@ class FeedViewController: UIViewController {
             self.dateTextView.text = date?.description
             self.contentTextView.text = data?.description
             let imageUrl = data?.topImage
-            let url = URL(string: imageUrl!)
-            self.imageView.kf.setImage(with: url)
+            if imageUrl != nil {
+                let url = URL(string: imageUrl!)
+                self.imageView.kf.setImage(with: url)
+            }
             self.hideProgressBar()
         })
     }
@@ -110,5 +120,9 @@ class FeedViewController: UIViewController {
         categoryLinksMap["finance"] = ["http://www.thehindubusinessline.com/markets/stock-markets/?service=rss", "https://faculty.iima.ac.in/~jrvarma/blog/index.cgi/index.rss", "http://rss.nytimes.com/services/xml/rss/nyt/Business.xml"]
         categoryLinksMap["economics"] = ["http://feeds2.feedburner.com/EconomistsView", "http://feeds2.feedburner.com/Themoneyillusion"]
         categoryLinksMap["others"] = ["https://www.engadget.com/rss.xml"]
+    }
+    
+    func backAction() -> Void {
+        self.navigationController?.popViewController(animated: true)
     }
 }

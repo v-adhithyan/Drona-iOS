@@ -39,6 +39,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         cell.categoryImage.backgroundColor = categoryColors[indexPath.row]
         cell.categoryImage.image = self.categoryImages[indexPath.row]
         cell.categoryTitle.text = self.categories[indexPath.row]
+        cell.selectionStyle = .none
         return cell
     }
     
@@ -46,7 +47,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let category = categories[indexPath.row].uppercased()
         let feedController = FeedViewController(nibName: "FeedViewController", bundle: nil)
         feedController.category = category
-        self.present(feedController, animated: true, completion: nil)
+        //let navigationController = UINavigationController(rootViewController: feedController)
+        //navigationController.title = "Drona"
+        self.navigationController?.pushViewController(feedController, animated: true)
+        //self.present(navigationController, animated: true, completion: nil)
     }
     
     func addNavBar() {
