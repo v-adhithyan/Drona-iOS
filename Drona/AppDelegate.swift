@@ -103,8 +103,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func setupCustomFont() {
-        //let customFont = UIFont.proximaNovaRegular(size: 17)
-        //UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font: customFont], for: .normal)
+        let customFont = UIFont.proximaNovaRegular(size: 17)
+        UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font: customFont], for: .normal)
     }
     
 }
