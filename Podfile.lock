@@ -7,14 +7,18 @@ PODS:
   - Ji/Ji-libxml (2.1.0)
   - Kingfisher (4.8.0)
   - MBProgressHUD (1.1.0)
+  - ReachabilitySwift (4.1.0)
   - ReadabilityKit (0.7.1):
     - Ji
+  - Toast-Swift (3.0.1)
 
 DEPENDENCIES:
   - FeedKit (~> 8.0)
   - Kingfisher (~> 4.0)
   - MBProgressHUD (~> 1.1.0)
+  - ReachabilitySwift
   - ReadabilityKit
+  - Toast-Swift
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -22,15 +26,19 @@ SPEC REPOS:
     - Ji
     - Kingfisher
     - MBProgressHUD
+    - ReachabilitySwift
     - ReadabilityKit
+    - Toast-Swift
 
 SPEC CHECKSUMS:
   FeedKit: 4a78f07adf7f0a224b904014678f1de82a7ffc21
   Ji: 21946da4e13425485ddd424edfaeeced0d80ad28
   Kingfisher: 976d828df2b24834c6a3f2fc4d82cdbd26552be1
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
+  ReachabilitySwift: 6849231cd4e06559f3b9ef4a97a0a0f96d41e09f
   ReadabilityKit: 45e79725f6d0377c555f38d9df7a6d4435898c04
+  Toast-Swift: ba0b01b095aada709d915f9beb1d38184a2721c3
 
-PODFILE CHECKSUM: 26ca24c6ce18273244a6c8e72a37ad44f7a826c2
+PODFILE CHECKSUM: eabe108ebf1a0fa93ccb1ced81fb176a14c4d9fc
 
 COCOAPODS: 1.5.3

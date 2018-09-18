@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		783437A62148F453004C3CD6 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783437A52148F453004C3CD6 /* Extensions.swift */; };
+		78387A9D2150A0E200E80BAD /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78387A9C2150A0E200E80BAD /* NetworkManager.swift */; };
 		783A05022148E832009ECC2C /* proximanova.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 783A05002148E832009ECC2C /* proximanova.ttf */; };
 		783A05032148E832009ECC2C /* proximanova-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 783A05012148E832009ECC2C /* proximanova-bold.ttf */; };
 		78645742214AA483002EF973 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78645740214AA483002EF973 /* FeedViewController.swift */; };
@@ -50,6 +51,7 @@
 		6EC94BEFC0102D7210340CD2 /* Pods-DronaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DronaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DronaTests/Pods-DronaTests.release.xcconfig"; sourceTree = "<group>"; };
 		70ACBD8C18B7187D8A205B49 /* Pods_DronaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DronaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		783437A52148F453004C3CD6 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		78387A9C2150A0E200E80BAD /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NetworkManager.swift; path = Drona/NetworkManager.swift; sourceTree = "<group>"; };
 		783A05002148E832009ECC2C /* proximanova.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = proximanova.ttf; sourceTree = "<group>"; };
 		783A05012148E832009ECC2C /* proximanova-bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "proximanova-bold.ttf"; sourceTree = "<group>"; };
 		78645740214AA483002EF973 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 		7868E6FA2104951C00E6A395 = {
 			isa = PBXGroup;
 			children = (
+				78387A9C2150A0E200E80BAD /* NetworkManager.swift */,
 				7868E7052104951C00E6A395 /* Drona */,
 				7868E71D2104951D00E6A395 /* DronaTests */,
 				7868E7282104951D00E6A395 /* DronaUITests */,
@@ -396,7 +399,9 @@
 				"${BUILT_PRODUCTS_DIR}/Ji/Ji.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
 				"${BUILT_PRODUCTS_DIR}/ReadabilityKit/ReadabilityKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -404,7 +409,9 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Ji.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReadabilityKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -422,6 +429,7 @@
 				7868E70F2104951C00E6A395 /* Drona.xcdatamodeld in Sources */,
 				78C9A51A214B5204008A93A8 /* FeedTableViewCell.swift in Sources */,
 				7868E7072104951C00E6A395 /* AppDelegate.swift in Sources */,
+				78387A9D2150A0E200E80BAD /* NetworkManager.swift in Sources */,
 				78AA7CF9214A0877006998AF /* MainMenuTableViewCell.swift in Sources */,
 				78645742214AA483002EF973 /* FeedViewController.swift in Sources */,
 				783437A62148F453004C3CD6 /* Extensions.swift in Sources */,

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Toast_Swift
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
    
@@ -15,6 +16,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     let categoryImages = [UIImage(named: "marketing_menu"), UIImage(named: "finance_menu"), UIImage(named: "economics_menu"), UIImage(named: "others_menu")]
     let categoryColors = [UIColor.hexcodeToUIColor(hex: "#885f7f"), UIColor.hexcodeToUIColor(hex: "#d0c490"), UIColor.hexcodeToUIColor(hex: "#13b0a5"), UIColor.hexcodeToUIColor(hex: "#FFA500")]
     
+    let network: NetworkManager = NetworkManager.sharedInstance
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,12 +47,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let category = categories[indexPath.row].uppercased()
-        let feedController = FeedViewController(nibName: "FeedViewController", bundle: nil)
-        feedController.category = category
-        //let navigationController = UINavigationController(rootViewController: feedController)
-        //navigationController.title = "Drona"
-        self.navigationController?.pushViewController(feedController, animated: true)
-        //self.present(navigationController, animated: true, completion: nil)
+        NetworkManager.isUnreachable { _ in
+            self.view.makeToast("Internet is unavailable")
+            return;
+        }
+        
+        NetworkManager.isReachable { _ in
+            let feedController = FeedViewController(nibName: "FeedViewController", bundle: nil)
+            feedController.category = category
+            self.navigationController?.pushViewController(feedController, animated: true)
+        }
     }
     
     func addNavBar() {

@@ -11,6 +11,7 @@ import MBProgressHUD
 import FeedKit
 import ReadabilityKit
 import Kingfisher
+import Toast_Swift
 
 class FeedViewController: UIViewController {
     
@@ -29,24 +30,20 @@ class FeedViewController: UIViewController {
     @IBOutlet weak var titleTextView: UITextView!
     @IBOutlet weak var contentTextView: UITextView!
     
+    let network = NetworkManager.sharedInstance
+    var deadline = DispatchTime.now() + .seconds(10)
+    var feedPopulated = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //UIApplication.shared.statusBarView?.backgroundColor = UIColor.hexcodeToUIColor(hex: "#E53935")'
-        
-        /*let backbutton = UIButton(type: .custom)
-        backbutton.setImage(UIImage(named: "back_button"), for: []) // Image can be downloaded from here below link
-        backbutton.setTitle("Back", for: [])
-        backbutton.setTitleColor(backbutton.tintColor, for: []) // You can change the TitleColor
-        backbutton.addTarget(self, action: Selector(("backAction")), for: .touchUpInside)
-        
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backbutton)*/
         
         titleTextView.font = UIFont.proximaNovaBold(size: 28)
         dateTextView.font = UIFont.proximaNovaRegular(size: 14)
         contentTextView.font = UIFont.proximaNovaRegular(size: 20)
         addItemsToCategoriesMap()
-        parseFeed(urls: (self.categoryLinksMap[category.lowercased()])!)
+        
+        checkIfFeedIsPopulated()
+        self.parseFeed(urls: (self.categoryLinksMap[self.category.lowercased()])!)
     }
 
     override func didReceiveMemoryWarning() {
@@ -106,12 +103,14 @@ class FeedViewController: UIViewController {
     }
     
     func showProgressBar() {
+        self.feedPopulated = false
         let loadingNotification = MBProgressHUD.showAdded(to: view, animated: true)
         loadingNotification.mode = MBProgressHUDMode.indeterminate
         loadingNotification.label.text = "Loading"
     }
     
     func hideProgressBar() {
+        self.feedPopulated = true
         MBProgressHUD.hideAllHUDs(for: self.view, animated: true)
     }
     
@@ -124,5 +123,18 @@ class FeedViewController: UIViewController {
     
     func backAction() -> Void {
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    func checkIfFeedIsPopulated() {
+        DispatchQueue.main.asyncAfter(deadline: deadline) {
+            if(!self.feedPopulated) {
+                self.hideProgressBar()
+                self.view.makeToast("Internet is unavailable. Please try again later.")
+                self.navigationController?.popViewController(animated: true)
+            } else {
+                self.deadline = DispatchTime.now() + .seconds(10)
+                self.checkIfFeedIsPopulated()
+            }
+        }
     }
 }

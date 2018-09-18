@@ -10,7 +10,9 @@ target 'Drona' do
    pod 'MBProgressHUD', '~> 1.1.0'
    pod 'ReadabilityKit'
    pod 'Kingfisher', '~> 4.0'
-   
+   pod 'Toast-Swift'
+   pod 'ReachabilitySwift'
+
   target 'DronaTests' do
     inherit! :search_paths
     # Pods for testing
