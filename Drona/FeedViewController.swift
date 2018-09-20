@@ -84,6 +84,15 @@ class FeedViewController: UIViewController {
         UIApplication.shared.openURL(url! as URL)
     }
     
+    
+    @IBAction func shareLink(_ sender: Any) {
+        let text = "Shared via Drona app. Get it on App store."
+        let url = NSURL(string: self.items[index % self.items.count].link!)! as URL
+        let activity = UIActivityViewController(activityItems: [url, text], applicationActivities: nil)
+        self.present(activity, animated: true, completion: nil)
+    }
+    
+    
     func parseArticle() {
         let item = self.items[index % self.items.count]
         let date = item.pubDate
